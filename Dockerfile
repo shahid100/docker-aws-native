@@ -2,13 +2,11 @@ FROM ubuntu:16.04
 
 RUN apt-get update
 ENV DOCKERVERSION=18.06.1-ce
-
-RUN tns doctor
+ 
 RUN sudo gem install cocoapods
 RUN pod setup
 RUN pip install six
-RUN tns platform add android
-RUN tns platform add ios
+ 
  
 
 RUN apt-get install curl python python-pip -y
